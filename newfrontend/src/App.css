@@ -1,0 +1,38 @@
+.app {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #f7f7f7;
+  padding: 15px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.content {
+  flex-grow: 1;
+  padding: 15px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+.page {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  /* any other styles you want for the sidebar */
+}
+
+.page-content {
+  flex: 1;
+  padding: 20px;
+}
