@@ -1,0 +1,112 @@
+/* .leftside{
+  flex-direction: row;
+} */
+
+.rightContent {
+    float: right;
+    width: 80%; /* You can adjust the width according to your layout */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+/* .rightContent .welcomeuser{
+    text-align: right;
+    color : #0f0;
+} */
+
+  
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    background-color: black; /* Set the background color to black */
+    color: #0f0; /* Set the text color to green (#0f0) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    border-right: 0.5px solid #555; /* Add a green line to the right side */
+  }
+  
+  /* Rest of the CSS remains the same as previously provided */
+  
+  
+  /* Styles for the website name in the top div */
+  .sidebar .top-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px; /* Increase the top padding to 20px */
+    border-bottom: 1px solid #555; /* Separation line */
+  }
+  
+  /* Style for the MicroLend heading */
+  .sidebar .top-div h2 {
+    font-size: 1.8em; /* Increase the font size for MicroLend */
+  }
+  
+  /* Styles for the "Reshape The Banking System" text */
+  .sidebar .top-div h4 {
+    color: #fff; /* Set the text color to white (#fff) */
+  }
+  
+  /* Styles for the navigation list in the center div */
+  .sidebar .center-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* flex-grow: 1; */
+    padding: 10px;
+    padding-top: 5px; /* Add top padding */
+    padding-bottom: 5px; /* Add bottom padding */
+  }
+  
+  /* Styles for the navigation list */
+  .sidebar .center-div .nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 2rem;
+    flex-grow: 1; /* Fill available vertical space */
+  }
+  
+  /* Styles for each navigation item */
+  .sidebar .center-div .nav-list .nav-item {
+    margin-bottom: 16px; /* Add padding between items */
+    font-size: larger;
+    border: 1rem solid rgb(29, 28, 28);
+    border-radius: 0.5rem;
+    width : 15rem;
+  }
+  
+  /* Styles for the links */
+  .sidebar .center-div .nav-list .nav-item a {
+    text-decoration: none;
+    border: none;
+    color: #0f0;
+    font-size: medium;
+  }
+  
+  /* Styles for links on hover */
+  .sidebar .center-div .nav-list .nav-item a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styles for the Logout link in the bottom div */
+  .sidebar .bottom-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black; /* Green background color */
+    padding: 5px;
+    align-items: center;
+    border-top: 1px solid #555; /* Separation line */
+  }
+  
+  /* Style only the "Logout" text to be red */
+  .sidebar .bottom-div a {
+    color: red;
+  }
