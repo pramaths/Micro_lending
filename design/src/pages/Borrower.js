@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import MicroLendingService from '../services/MicroLendingService';
-
+import './borrower.css'
 function Borrower() {
     const [amount, setAmount] = useState('');
     const [duration, setDuration] = useState('');
@@ -29,9 +29,7 @@ function Borrower() {
 
     return (
         <div>
-            <h2>Borrower</h2>
-
-            <div>
+            <div className='containerborrower'>
                 <h3>Request Loan</h3>
                 <input 
                     type="text" 
@@ -53,7 +51,7 @@ function Borrower() {
                 <button onClick={handleRequestLoan}>Request Loan</button>
             </div>
 
-            <div>
+            <div className='payment'>
                 <h3>View Repayment Amount</h3>
                 <input 
                     type="text" 

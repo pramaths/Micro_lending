@@ -1,0 +1,19 @@
+.containerborrower{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+}
+
+h3{
+    color: black;
+    text-align: center;
+    font-size: larger;
+}
+
+.payment{
+    display: flex;
+    flex-direction: column;
+   margin: 5rem;
+}

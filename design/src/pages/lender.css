@@ -1,0 +1,101 @@
+/* Lender.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+p {
+    color: #666;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+strong {
+    color: #444;
+}
+
+div > strong {
+    display: block;
+    margin: 10px 0;
+}
+
+input {
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 15px;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+div > p:nth-child(2) {
+    margin-top: 20px;
+}
+
+ul > li > div > ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul > li > div > ul > li {
+    border: none;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+
+ul > li > div > ul > li > p,
+ul > li > div > ul > li > strong {
+    margin: 5px 0;
+}
+.lenderbox{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.loans{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.attributes{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #666;
+    font-size: medium;
+}
