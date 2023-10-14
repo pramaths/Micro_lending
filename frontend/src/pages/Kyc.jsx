@@ -3,7 +3,6 @@ import axios from 'axios';
 import './kyc.css';
 
 
-
 const AadharForm = () => {
 const [aadharNumber, setAadharNumber] = useState('');
    const [mobileNumber, setMobileNumber] = useState('');
