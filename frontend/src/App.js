@@ -1,29 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
-import { auth } from "./firebase";
-import { onAuthStateChanged } from 'firebase/auth';
-import Login from "./Login";
-import HomePage from "./HomePage";
+import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Login from "./pages/Login";
+import HomePage from "./pages/HomePage";
+import Kyc from "./pages/Kyc";
+import Register from "./pages/Register";
 
 function App() {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-    });
-    return () => unsubscribe();
-  }, []);
-
   return (
-    <Router>
-      <div className="App">
+    <BrowserRouter>
         <Routes>
-          <Route path="/" element={user ? <HomePage /> : <Navigate to="/login" />} />
-          <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/kyc" element={<Kyc />} />
         </Routes>
-      </div>
-    </Router>
+      </BrowserRouter>
   );
 }
 
