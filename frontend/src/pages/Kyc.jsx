@@ -53,6 +53,7 @@ const [aadharNumber, setAadharNumber] = useState('');
     <section>
     <div className="kyc">
       <div className="content">
+        <img src="/icon.png" alt="Logo" className="logo" style={{ width: '100px', height: 'auto' }}  />
         <h2>Verify Aadhar Number</h2>
         <form className="form" onSubmit={handleSubmit}>
           <div className="inputBox">
