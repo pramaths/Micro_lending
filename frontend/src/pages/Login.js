@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import './login.css'
 const Login = () => {
@@ -40,7 +40,7 @@ const Login = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        <i>Username</i>
+                       
                     </div>
                     <div className="inputBox">
                         <input
@@ -50,7 +50,6 @@ const Login = () => {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                        <i>Password</i>
                     </div>
                     <div className="inputBox">
                         <input
