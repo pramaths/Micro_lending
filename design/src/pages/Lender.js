@@ -66,7 +66,7 @@ const Lender = () => {
                     <h2>Loan Requests:</h2>
                     <div className='loans'>
                     <ul>
-                        {loanRequests.slice().reverse().map((loan, index) => (
+                        {loanRequests.map((loan, index) => (
                             <li key={index}>
                                 <div>
                                 

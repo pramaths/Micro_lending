@@ -1,19 +1,64 @@
-.containerborrower{
+/* Setting the whole background to black */
+body, html {
+    background-color: black;
+}
+
+/* Setting all text to blueviolet */
+body {
+    color: blueviolet;
+}
+
+.containerborrower {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 4rem;
+    background-color: black; /* This will be redundant if the whole background is black */
+    color: blueviolet;
+    gap: 1rem;
 }
 
-h3{
-    color: black;
+h3 {
+    color: blueviolet; /* Changed from black to blueviolet as per your instruction */
     text-align: center;
-    font-size: larger;
+    font-size: 18px;
 }
 
-.payment{
+/* .payment {
     display: flex;
     flex-direction: column;
-   margin: 5rem;
+    margin-left: 20rem;
+    justify-content: center;
+    width:800px;
+ 
+    align-items: center;
+    color: blueviolet; /* Ensuring text within .payment is also blueviolet 
+}*/
+
+
+.payment .input{
+   gap : 5rem;
+}
+
+button{
+    background-color : blueviolet;
+
+
+} 
+
+/* ... Your other CSS rules ... */
+
+.payment {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35rem;
+    color: blueviolet;
+    width:300px;
+    font-size: 18px; /* Adjust as necessary to get your desired font size */
+    gap: 1rem; /* This creates space between each child element in the container */
+}
+
+.payment button {
+    margin-top: 1rem; /* Adds a gap between the input field and the button */
 }

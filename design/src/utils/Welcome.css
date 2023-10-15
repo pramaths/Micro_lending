@@ -1,0 +1,28 @@
+.welcome-container {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .logo {
+    max-width: 200px;
+    margin: 20px auto;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    padding:30px;
+    
+  }
+  
+  .button {
+    margin-right: 10px;
+    background-color: white;
+    border-radius:10px;
+    height:80px;
+    width:200px;
+    font-size: larger;
+    cursor:pointer;
+  }
+  h1{
+    color:blueviolet;
+  }

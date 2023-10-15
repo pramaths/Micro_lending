@@ -5,8 +5,9 @@ function Navbar() {
     return (
         <nav>
             <ul>
+            <img src="icon.png" alt="icon"></img>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/Home">Home</Link>
                 </li>
                 <li>
                     <Link to="/Borrower">Borrow</Link>
