@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Sedgwick+Ave+Display&display=swap');
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black; /* Background color for the page */
+  }
+  
+  .sliding-text {
+    display: flex;
+    color: transparent;
+  }
+  
+  .sliding-text span {
+    font-size: 50px;
+    font-family: 'Cedarville Cursive', cursive;
+    animation: slide-in 1.5s ease forwards;
+    animation-delay: 1s; /* Delay for each word */
+    white-space: nowrap; /* Prevent line breaks within words */
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+      color: transparent; /* Start with transparent color */
+    }
+    100% {
+      transform: translateX(0);
+      color: blueviolet; /* End with blue-violet color */
+    }
+  }

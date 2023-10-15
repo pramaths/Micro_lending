@@ -25,6 +25,7 @@ const Profile = () => {
 
     const loadLoanRequests = async () => {
         try {
+            console.log("hello pramath ")
             const loanRequestsData = await MicroLendingService.getAllLoans();
             const filteredLoans = loanRequestsData.filter(loan => loan[0] === currentAddress);
             setLoanRequests(filteredLoans);

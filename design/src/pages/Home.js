@@ -167,12 +167,21 @@
 // }
 
 // export default Home
-import React from 'react'
+import React from 'react';
+import '../utils/home.css';
 
-const Home = () => {
+function Home() {
   return (
-    <div>Home</div>
-  )
+    <div className="container">
+      <div className="sliding-text">
+        <span>Hello </span>
+        <span>&nbsp;</span>
+        <span>There!! </span>
+        <span>&nbsp;</span>
+        <span>User</span>
+      </div>
+    </div>
+  );
 }
 
-export default Home
+export default Home;
