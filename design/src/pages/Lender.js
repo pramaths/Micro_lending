@@ -42,6 +42,8 @@ const Lender = () => {
     const loadLoanRequests = async () => {
         try {
             const loanRequestsData = await MicroLendingService.getAllLoans();
+console.log('Received loan data:', loanRequestsData);
+setLoanRequests(loanRequestsData);
             setLoanRequests(loanRequestsData);
         } catch (error) {
             console.error('Error loading loan requests:', error);

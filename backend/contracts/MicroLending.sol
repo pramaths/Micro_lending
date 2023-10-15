@@ -12,12 +12,14 @@ contract MicroLending {
         address payable borrower;
         uint amountRequested;
         uint amountFunded;
-        uint fundraisingDeadline;
+       
+        bool fundraisingEnded;
         bool isFunded;
         bool isRepaid;
         uint repaymentAmount;  // This will store principal + interest
         string description;
         Lender[] lenders;
+         uint fundraisingDeadline;
     }
 
     Loan[] public loans;
@@ -52,7 +54,12 @@ contract MicroLending {
             amountFunded: msg.value
         }));
 
+     
         loan.amountFunded += msg.value;
+
+    if (loan.amountFunded == loan.amountRequested) {
+        loan.isFunded = true;  // Update the isFunded flag when amountFunded matches amountRequested
+    }
 
         emit LoanFunded(msg.sender, _loanId, msg.value);
     }
@@ -62,17 +69,17 @@ contract MicroLending {
     require(msg.sender == loan.borrower, "Only the borrower can end the fundraising");
     // require(block.timestamp > loan.fundraisingDeadline, "Fundraising for this loan is still ongoing");
     require(!loan.isFunded, "Funds have already been sent to the borrower");
-    require(loan.amountFunded == loan.amountRequested, "The loan is not fully funded"); 
-
+    // require(loan.amountFunded == loan.amountRequested, "The loan is not fully funded"); 
+ loan.fundraisingEnded = true; 
     loan.borrower.transfer(loan.amountFunded);
     loan.isFunded = true;
 
     emit LoanSentToBorrower(_loanId, loan.amountFunded);
 }
-    function repayLoan(uint _loanId) public payable {
+   function repayLoan(uint _loanId) public payable {
     Loan storage loan = loans[_loanId];
     require(msg.sender == loan.borrower, "Only the borrower can repay the loan");
-    require(loan.isFunded, "Loan is not funded yet");
+    // require(loan.isFunded || loan.fundraisingEnded, "Loan is not funded yet or fundraising was not ended by the borrower");
     require(!loan.isRepaid, "Loan already repaid");
     require(msg.value == loan.repaymentAmount, "Incorrect repayment amount"); 
 
@@ -89,6 +96,7 @@ contract MicroLending {
 
     emit LoanRepaid(_loanId);
 }
+
 function getLendersForLoan(uint _loanId) public view returns (Lender[] memory) {
     return loans[_loanId].lenders;
 }

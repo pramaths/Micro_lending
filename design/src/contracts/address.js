@@ -1,1 +1,1 @@
-export const MicroLendingAddress = "0x6B9B7D5A07157174cB1B7F7e15aF11A1778fe82a";
+export const MicroLendingAddress = "0x07B100c048d7C59566980c4Ed3801768F2183ce9";
