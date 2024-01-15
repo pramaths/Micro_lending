@@ -62,7 +62,6 @@ contract("MicroLending", accounts => {
         assert.equal(allLoans[0].borrower, accounts[0]);
         assert.equal(allLoans[0].amountRequested.toString(), web3.utils.toWei("1", "ether"));
         assert.equal(allLoans[0].description, "Need loan for medical expenses");
-        // Note: There's no direct duration field in Loan struct. You might need another logic to calculate and assert the duration.
     });
    
 
